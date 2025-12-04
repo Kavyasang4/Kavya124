@@ -1,132 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kavya Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavya Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: #f0f2f5;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* NAVBAR */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #1e3a8a;
-      color: white;
-      padding: 15px 40px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 10;
-    }
+<style>
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;
+}
 
-    nav h2 {
-      margin: 0;
-    }
+body {
+ background: #e9f2ff;
+ color: #1a1a1a;
+ scroll-behavior: smooth;
+}
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
+/* NAVBAR */
+nav {
+ background: white;
+ box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+ padding: 15px 10%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 999;
+}
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+nav h2 {
+ color: #007bff;
+ font-size: 26px;
+ font-weight: 700;
+}
 
-    nav ul li a:hover {
-      color: #ffe600;
-    }
+nav ul {
+ list-style: none;
+ display: flex;
+ gap: 25px;
+}
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(to right,#2563eb,#1e3a8a);
-      color: white;
-      padding-top: 60px;
-    }
+nav ul li a {
+ text-decoration: none;
+ color: #111;
+ font-size: 18px;
+ font-weight: 600;
+ transition: 0.3s;
+}
 
-    .hero h1 {
-      font-size: 50px;
-      margin: 10px 0;
-    }
+nav ul li a:hover {
+ color: #007bff;
+}
 
-    .hero p {
-      font-size: 20px;
-      margin: 0;
-    }
+/* HERO */
+.hero {
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ padding-top: 75px;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #ffe600;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.hero h1 {
+ font-size: 55px;
+ font-weight: 700;
+ color: #007bff;
+}
 
-    .btn:hover {
-      background: black;
-      color: white;
-    }
+.hero span {
+ color: #111;
+ font-weight: 700;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 80px 10%;
-    }
+.hero p {
+ font-size: 20px;
+ color: #333;
+ margin-top: 10px;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      color: #1e3a8a;
-      margin-bottom: 30px;
-    }
+.btn {
+ margin-top: 25px;
+ padding: 10px 30px;
+ background: #007bff;
+ color: white;
+ border-radius: 6px;
+ text-decoration: none;
+ font-size: 18px;
+ transition: 0.3s;
+}
 
-    .projects ul li {
-      padding: 10px;
-      background: white;
-      margin: 10px 0;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+.btn:hover {
+ background: #005fcc;
+ transform: scale(1.05);
+}
 
-    footer {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
+/* SECTIONS */
+section {
+ padding: 80px 10%;
+}
 
-    /* SCROLL ANIMATION */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: 1s;
-    }
-    .show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+section h2 {
+ text-align: center;
+ font-size: 36px;
+ margin-bottom: 40px;
+ color: #007bff;
+}
+
+/* ABOUT */
+.about p {
+ max-width: 700px;
+ font-size: 18px;
+ margin: auto;
+ text-align: center;
+ line-height: 30px;
+ color: #222;
+}
+
+/* SKILLS */
+.skills-list {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 20px;
+}
+
+.skill {
+ padding: 12px 24px;
+ background: white;
+ border-radius: 6px;
+ font-size: 18px;
+ font-weight: 600;
+ border: 2px solid #007bff;
+ transition: 0.3s;
+}
+
+.skill:hover {
+ background: #007bff;
+ color: white;
+ transform: scale(1.1);
+}
+
+/* PROJECTS */
+.project {
+ background: white;
+ padding: 18px;
+ border-radius: 10px;
+ margin: 15px auto;
+ max-width: 700px;
+ border-left: 6px solid #007bff;
+ transition: 0.4s;
+}
+
+.project:hover {
+ transform: translateY(-8px);
+}
+
+/* FOOTER */
+footer {
+ background: #007bff;
+ text-align: center;
+ color: white;
+ padding: 18px;
+ font-size: 14px;
+}
+</style>
+
 </head>
 
 <body>
 
 <nav>
-  <h2>Kavya Portfoli
+ <h2>My Portfolio</h2>
+ <ul>
+     <li><a href="#home">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#skills">Skills</a></li>
+     <li><a href="#projects">Projects</a></li>
+ </ul>
+</nav>
+
+<section id="home" class="hero">
+ <h1>I’m Kavya</h1>
+ <span>Front-End Web Developer</span>
+ <p>Creating beautiful & interactive websites with clean code.</p>
+ <a href="#projects" class="btn">View My Projects</a>
+</section>
+
+<section id="about" class="about">
+ <h2>About Me</h2>
+ <p>
+ I am a passionate web developer who enjoys building responsive and user-friendly
+ web interfaces. I love solving UI challenges and continuously improving my skills
+ in modern web technologies.
+ </p>
+</section>
+
+<section id="skills">
+ <h2>My Skills</h2>
+ <div class="skills-list">
+     <div class="skill">HTML</div>
+     <div class="skill">CSS</div>
+     <div class="skill">JavaScript</div>
+     <div class="skill">Bootstrap</div>
+     <div class="skill">Git & GitHub</div>
+     <div class="skill">Python (Basics)</div>
+ </div>
+</section>
+
+<section id="projects">
+ <h2>Projects</h2>
+
+ <div class="project">
+     <h3>Banking Automation System</h3>
+     <p>A Python GUI application with role-based login and secure transactions.</p>
+ </div>
+
+ <div class="project">
+     <h3>Portfolio Website</h3>
+     <p>This portfolio website built using HTML, CSS & JavaScript showcasing my skills and work.</p>
+ </div>
+
+</section>
+
+<footer>
+ © 2024 Kavya | Email: kavya@gmail.com ✨
+</footer>
+
+<script>
+console.log("Website Loaded Successfully");
+</script>
+
+</body>
+</html>
+
